@@ -78,6 +78,13 @@ class CompetitionDetail(CompetitionOut):
     events: list[EventOut]
 
 
+class CompetitionStats(BaseModel):
+    competition_id: int
+    events: int
+    confirmed_registrations: int
+    results: int
+
+
 class AthleteCreate(BaseModel):
     first_name: str = Field(min_length=1, max_length=60)
     last_name: str = Field(min_length=1, max_length=60)
