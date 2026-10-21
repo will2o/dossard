@@ -1,0 +1,10 @@
+{
+  "name": "dossard-equipe",
+  "description": "Socle d'équipe Dossard : skill api-conventions, hooks de garde, de formatage et de journal MCP, et serveur MCP dossard.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Wilfried Lefèvre"
+  },
+  "license": "UNLICENSED",
+  "icon": "./assets/icon.png"
+}

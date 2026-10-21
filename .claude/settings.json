@@ -28,41 +28,15 @@
       "Bash(env)",
       "Bash(printenv*)"
     ],
-    "allow": ["mcp__dossard__list_views"],
-    "ask": ["mcp__dossard__query_view"]
+    "allow": ["mcp__plugin_dossard-equipe_dossard__list_views"],
+    "ask": ["mcp__plugin_dossard-equipe_dossard__query_view"]
   },
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "Bash|PowerShell",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/garde.py\"",
-            "onFailure": "block"
-          }
-        ]
-      },
-      {
-        "matcher": "mcp__.*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/journal_mcp.py\""
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "matcher": "Write|Edit|Bash|PowerShell",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/formate.py\""
-          }
-        ]
-      }
-    ]
+  "extraKnownMarketplaces": {
+    "equipe-dossard": {
+      "source": { "source": "directory", "path": "." }
+    }
+  },
+  "enabledPlugins": {
+    "dossard-equipe@equipe-dossard": true
   }
 }
