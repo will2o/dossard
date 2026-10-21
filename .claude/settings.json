@@ -27,7 +27,9 @@
       "Bash(. *.env*)",
       "Bash(env)",
       "Bash(printenv*)"
-    ]
+    ],
+    "allow": ["mcp__dossard__list_views"],
+    "ask": ["mcp__dossard__query_view"]
   },
   "hooks": {
     "PreToolUse": [
@@ -38,6 +40,15 @@
             "type": "command",
             "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/garde.py\"",
             "onFailure": "block"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/journal_mcp.py\""
           }
         ]
       }

@@ -9,6 +9,7 @@ build/
 # Base SQLite locale (recréée par scripts/seed.py)
 data/*.db
 data/*.db-journal
+data/*.log
 
 # Claude Code : fichiers personnels, jamais versionnés
 CLAUDE.local.md
