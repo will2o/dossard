@@ -7,8 +7,6 @@
       "Read(**/.env.*)",
       "Edit(./.env)",
       "Edit(./.env.*)",
-      "Write(./.env)",
-      "Write(./.env.*)",
       "Edit(./scripts/legacy/**)",
       "Bash(cat *.env*)",
       "Bash(head *.env*)",
